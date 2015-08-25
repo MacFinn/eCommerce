@@ -1,0 +1,19 @@
+﻿@model eCommerceWebsite.Models.ProductResult
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin-top: 15px;">
+    <div class="col-md-12">
+        
+        <img src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" class="img-responsive"/> 
+    </div>
+    <div class="col-md-12">
+        <h6>@Model.Name</h6>
+    </div>
+    <div class="col-md-12">
+        <h4>£@Model.Price</h4>
+    </div>
+    <div class="col-md-12">
+        <h6>Stock: @Model.Stock</h6>
+    </div>
+    <div class="col-md-12">
+        <input type="button" class="btn btn-success btn-lg" value="Add to basket" style="width: 100%;" />
+    </div>
+</div>

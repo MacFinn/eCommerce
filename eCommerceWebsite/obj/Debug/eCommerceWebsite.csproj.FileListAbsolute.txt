@@ -1,0 +1,112 @@
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\eCommerceWebsite.dll.config
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\eCommerceWebsite.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\eCommerceWebsite.pdb
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Antlr3.Runtime.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.SqlServer.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Google.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Web.Infrastructure.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Newtonsoft.Json.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Owin.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Helpers.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Mvc.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Optimization.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Razor.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Deployment.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Razor.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\WebGrease.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Helpers.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Mvc.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Optimization.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Razor.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Deployment.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Razor.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Newtonsoft.Json.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Antlr3.Runtime.pdb
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.SqlServer.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Google.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\obj\Debug\eCommerceWebsite.csprojResolveAssemblyReference.cache
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\obj\Debug\eCommerceWebsite.dll
+c:\users\mfinn\documents\visual studio 2013\Projects\eCommerceWebsite\eCommerceWebsite\obj\Debug\eCommerceWebsite.pdb
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\App_Data\NugFace.mdf
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\App_Data\NugFace_log.ldf
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Content\Images\3usLWRi.png
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\eCommerceWebsite.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\eCommerceWebsite.pdb
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Antlr3.Runtime.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.SqlServer.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Newtonsoft.Json.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Owin.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Helpers.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Mvc.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Optimization.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Razor.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Deployment.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Razor.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\WebGrease.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Helpers.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Mvc.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Optimization.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.Razor.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Deployment.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\System.Web.WebPages.Razor.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Newtonsoft.Json.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Antlr3.Runtime.pdb
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\EntityFramework.SqlServer.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\obj\Debug\eCommerceWebsite.csprojResolveAssemblyReference.cache
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\obj\Debug\eCommerceWebsite.dll
+C:\Users\WKMac\Desktop\eCommerceWebsite\eCommerceWebsite\obj\Debug\eCommerceWebsite.pdb
