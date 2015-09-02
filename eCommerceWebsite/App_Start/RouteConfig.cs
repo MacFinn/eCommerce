@@ -18,6 +18,12 @@ namespace eCommerceWebsite
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Pages",
+                url: "{controller}/{action}/{category}/{page}",
+                defaults: new { controller = "Store", action = "GoToPage"}
+            );
         }
     }
 }

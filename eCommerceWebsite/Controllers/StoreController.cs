@@ -12,6 +12,33 @@ namespace eCommerceWebsite.Controllers
     {
         public ActionResult Browse(string category)
         {
+            CategoryViewModel model = new CategoryViewModel();
+            model.Products = getResultsByCategory(category);
+
+            if (model.Products.Count > 8)
+            {
+                double count = model.Products.Count / 8;
+                model.TotalPages = (int)Math.Ceiling(count);
+                model.CurrentPage = 1;
+            }
+            else
+            {
+                model.TotalPages = 1;
+                model.CurrentPage = 1;
+            }
+
+
+
+            model.Products = model.Products.GetRange(0, 8);
+
+            
+            model.CurrentCategory = category;
+
+            return View(model.CurrentCategory, model);
+        }
+
+        public List<ProductResult> getResultsByCategory(string category)
+        {
             ProductsDataContext db = new ProductsDataContext();
 
             var query = from p in db.Products
@@ -35,13 +62,8 @@ namespace eCommerceWebsite.Controllers
 
                 results.Add(result);
             }
-
-            CategoryViewModel model = new CategoryViewModel();
-            model.Products = results;
-
-            return View(category, model);
+            return results;
         }
-
         public ActionResult Details(ProductResult model)
         {
             int id = model.Id;
@@ -68,6 +90,24 @@ namespace eCommerceWebsite.Controllers
             };
 
             return result;
+        }
+
+        public ActionResult GoToPage(int page, string category)
+        {
+            string CurrentCategory = category;
+            List<ProductResult> allResults = getResultsByCategory(category);
+            int firstResultIndex = (page - 1) * 8;
+            int resultCount = 8;
+            var selectedResults = allResults.GetRange(firstResultIndex, resultCount);
+
+            CategoryViewModel model = new CategoryViewModel();
+
+            model.Products = selectedResults;
+            model.CurrentPage = page;
+            model.TotalPages = (int)Math.Ceiling((double)allResults.Count / 8);
+            model.CurrentCategory = category;
+
+            return View(category, model);
         }
 	}
 }

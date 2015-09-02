@@ -14,5 +14,6 @@ namespace eCommerceWebsite.Models
         public string Description { get; set; }
         public int Stock { get; set; }
         public int Id { get; set; }
+
     }
 }

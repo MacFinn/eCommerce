@@ -243,6 +243,9 @@
     <Content Include="Views\Store\SmokingAccessories.cshtml" />
     <Content Include="Views\Store\SmokingParaphenalia.cshtml" />
     <Content Include="Views\Store\Sale.cshtml" />
+    <Content Include="Views\Store\Details.cshtml" />
+    <Content Include="Views\Shared\Partial1.cshtml" />
+    <Content Include="Views\Shared\PaginationPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

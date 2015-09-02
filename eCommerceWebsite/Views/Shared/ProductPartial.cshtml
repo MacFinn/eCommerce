@@ -1,8 +1,9 @@
 ﻿@model eCommerceWebsite.Models.ProductResult
 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin-top: 15px;">
     <div class="col-md-12">
-        
-        <img src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" class="img-responsive"/> 
+        <a href="@Url.Action("Details", "Store", Model)">
+            <img src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" class="img-responsive" />
+        </a>
     </div>
     <div class="col-md-12">
         <h6>@Model.Name</h6>
@@ -14,6 +15,11 @@
         <h6>Stock: @Model.Stock</h6>
     </div>
     <div class="col-md-12">
-        <input type="button" class="btn btn-success btn-lg" value="Add to basket" style="width: 100%;" />
-    </div>
+        <a href="@Url.Action("Details", "Store", Model)">
+            <input type="button" class="btn btn-default btn-sm" value="View details" style="width: 100%;" />
+        </a>
+        <a href="@Url.Action("AddToCart", "Store", Model)">
+            <input type="button" class="btn btn-success btn-sm" value="Add to basket" style="width: 100%; margin-top: 10px;" />
+        </a>
+</div>
 </div>
