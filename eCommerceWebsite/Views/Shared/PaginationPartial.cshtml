@@ -1,12 +1,66 @@
 ﻿@model eCommerceWebsite.Models.CategoryViewModel
-@if (Model.TotalPages > 1 && Model.TotalPages > 3)
+@if (Model.TotalPages >= 3)
 {
     if (Model.CurrentPage == 1)
     {
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage, category = Model.CurrentCategory })">
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: #3fad46; color: white; font-size: 15px; ">
                 @Model.CurrentPage
+        </div>
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
+            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage + 1,category=Model.CurrentCategory })">
+                @(Model.CurrentPage + 1)
             </a>
+        </div>
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
+            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage + 2,category=Model.CurrentCategory })">
+                @(Model.CurrentPage + 2)
+            </a>
+        </div>
+    }
+    else if (Model.CurrentPage == Model.TotalPages){
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
+            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage - 2,category=Model.CurrentCategory })">
+                @(Model.CurrentPage - 2)
+            </a>
+        </div>
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
+            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage - 1,category=Model.CurrentCategory })">
+                @(Model.CurrentPage - 1)
+            </a>
+        </div>
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: #3fad46; color: white; font-size: 15px; ">
+                @Model.CurrentPage
+        </div>
+    }
+    else
+    {
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
+            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage - 1, category = Model.CurrentCategory })">
+                @(Model.CurrentPage - 1)
+            </a>
+        </div>
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: #3fad46; color: white; font-size: 15px; ">
+                @Model.CurrentPage
+        </div>
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
+            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage + 1,category=Model.CurrentCategory })">
+                @(Model.CurrentPage + 1)
+            </a>
+        </div>
+    }
+}
+else if (Model.TotalPages == 1)
+{
+    <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: #3fad46; color: white; font-size: 15px; ">
+            @Model.CurrentPage
+    </div>
+}
+else
+{
+    if (Model.CurrentPage == 1)
+    {
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: #3fad46; color: white; font-size: 15px; ">
+                @Model.CurrentPage
         </div>
         <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
             <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage + 1,category=Model.CurrentCategory })">
@@ -17,80 +71,12 @@
     else
     {
         <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage - 1, category = Model.CurrentCategory })">
-                @(Model.CurrentPage - 1)
+            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage - 1,category=Model.CurrentCategory })">
+                @(Model.CurrentPage -1)
             </a>
         </div>
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage, category = Model.CurrentCategory })">
+        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: #3fad46; color: white; font-size: 15px; ">
                 @Model.CurrentPage
-            </a>
-        </div>
-    }
-}
-else if (Model.TotalPages == 1)
-{
-    <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-        <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page=Model.CurrentPage,category=Model.CurrentCategory })">
-            @Model.CurrentPage
-        </a>
-    </div>
-}
-else
-{
-    if (Model.CurrentPage == 1)
-    {
-
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage, category = Model.CurrentCategory })">
-                @Model.CurrentPage
-            </a>
-        </div>
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage + 1, category = Model.CurrentCategory })">
-                @(Model.CurrentPage + 1)
-            </a>
-        </div>
-        <div style=" display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px;">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage + 2, category = Model.CurrentCategory })">
-                @(Model.CurrentPage + 2)
-            </a>
-        </div>
-
-    }
-    else if (Model.CurrentPage == Model.TotalPages && Model.TotalPages > 2){
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage - 2, category = Model.CurrentCategory })">
-                @(Model.CurrentPage - 2)
-            </a>
-        </div>
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage - 2, category = Model.CurrentCategory })">
-                @(Model.CurrentPage - 1)
-            </a>
-        </div>
-        <div style=" display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px;">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage, category = Model.CurrentCategory })">
-               @Model.CurrentPage
-            </a>
-        </div>
-    }
-    else
-    {
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage - 1, category = Model.CurrentCategory })">
-                @(Model.CurrentPage - 1)
-            </a>
-        </div>
-        <div style="display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px; ">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage, category = Model.CurrentCategory })">
-                @Model.CurrentPage
-            </a>
-        </div>
-        <div style=" display: inline-block; width: 25px; height: 25px; text-align: center; line-height: 25px; border-radius: 4px 4px 4px 4px; background-color: rgb(0, 102, 0); color: white; font-size: 15px;">
-            <a style="color: #ffffff;" href="@Url.Action("GoToPage", "Store", new { page = Model.CurrentPage + 1, category = Model.CurrentCategory })">
-                @(Model.CurrentPage + 1)
-            </a>
         </div>
     }
 }

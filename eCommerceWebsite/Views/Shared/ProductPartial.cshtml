@@ -2,7 +2,7 @@
 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin-top: 15px;">
     <div class="col-md-12">
         <a href="@Url.Action("Details", "Store", Model)">
-            <img src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" class="img-responsive" />
+            <img src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" class="img-responsive" style="display:block; margin: 0 auto;" />
         </a>
     </div>
     <div class="col-md-12">
@@ -18,7 +18,7 @@
         <a href="@Url.Action("Details", "Store", Model)">
             <input type="button" class="btn btn-default btn-sm" value="View details" style="width: 100%;" />
         </a>
-        <a href="@Url.Action("AddToCart", "Store", Model)">
+        <a href="@Url.Action("AddToBasket", "Store", Model)">
             <input type="button" class="btn btn-success btn-sm" value="Add to basket" style="width: 100%; margin-top: 10px;" />
         </a>
 </div>

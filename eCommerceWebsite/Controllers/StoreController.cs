@@ -20,7 +20,7 @@ namespace eCommerceWebsite.Controllers
                 double count = model.Products.Count / 8;
                 model.TotalPages = (int)Math.Ceiling(count);
                 model.CurrentPage = 1;
-            }
+             }
             else
             {
                 model.TotalPages = 1;
@@ -108,6 +108,36 @@ namespace eCommerceWebsite.Controllers
             model.CurrentCategory = category;
 
             return View(category, model);
+        }
+        public ActionResult AddToBasket(ProductResult model)
+        {
+            int productId = model.Id;
+            int quantity = 1;
+
+            if (Request.Cookies["Basket"] == null)
+            {
+                HttpCookie cookie = new HttpCookie("Basket");
+                cookie.Values.Add(productId.ToString(), quantity.ToString());
+            }
+            else
+            {
+                var cookie = Request.Cookies["Basket"];
+
+                List<string[]> allValues = new List<string[]>();
+
+                for (int i = 0; i < cookie.Values.Count; i++ )
+                {
+                    allValues.Add(cookie.Values.GetValues(i));
+                }
+
+                var x = cookie.Values.AllKeys;
+                    
+            }
+
+
+           
+
+            return Browse(model.Category.Trim());
         }
 	}
 }
