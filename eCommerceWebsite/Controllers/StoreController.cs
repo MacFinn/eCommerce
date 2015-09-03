@@ -118,24 +118,21 @@ namespace eCommerceWebsite.Controllers
             {
                 HttpCookie cookie = new HttpCookie("Basket");
                 cookie.Values.Add(productId.ToString(), quantity.ToString());
+                Response.Cookies.Add(cookie);
             }
             else
             {
-                var cookie = Request.Cookies["Basket"];
+                HttpCookie cookie = Request.Cookies["Basket"];
 
-                List<string[]> allValues = new List<string[]>();
+                string item = cookie.Values[productId.ToString()];
 
-                for (int i = 0; i < cookie.Values.Count; i++ )
-                {
-                    allValues.Add(cookie.Values.GetValues(i));
-                }
+                if (item != null)
+                    cookie.Values[productId.ToString()] = (int.Parse(item) + 1).ToString();
+                else
+                    cookie.Values.Add(productId.ToString(), quantity.ToString());
 
-                var x = cookie.Values.AllKeys;
-                    
-            }
-
-
-           
+                Response.Cookies.Add(cookie);
+            }           
 
             return Browse(model.Category.Trim());
         }
