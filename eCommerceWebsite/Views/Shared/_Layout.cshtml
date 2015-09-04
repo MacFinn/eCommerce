@@ -27,16 +27,15 @@
                     <li>@Html.ActionLink("Accessories", "Browse", "Store", new { category = "SmokingAccessories" }, null)</li>
                     <li>@Html.ActionLink("Paraphenalia", "Browse", "Store", new { category = "SmokingParaphenalia" }, null)</li>
                     <li>@Html.ActionLink("Sale", "Browse", "Store", new { category = "Sale" }, null)</li>
-                    <li>@Html.ActionLink("Basket", "Checkout", "Store", null, new { @id="BasketText" })</li>
+                    <li>@Html.ActionLink("Basket", "Checkout", "Store", null, new { @id = "BasketText" })</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        
-        
+
+
         <footer>
             <br />
             <hr />
@@ -44,32 +43,42 @@
         </footer>
     </div>
 
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
     <script type="text/javascript">
         window.onload = function () {
+            $(".quantityValue").val("1");
+
+
             var numberOfItems = 0;
+            var cookie = document.cookie;
 
-            var cookie = getCookie("Basket");
+            if (cookie != null) {
+                cookie = cookie.substr(7, cookie.length);
 
-            console.log(cookie);
+                cookie = cookie.split('&');
+
+                for (var i = 0; i < cookie.length; i++) {
+                    var tempCookie = cookie[i].split('=');
+
+                    numberOfItems = +numberOfItems + +tempCookie[1];
+                }
+
+            }
 
             document.getElementById("BasketText").innerHTML = "Basket (" + numberOfItems + ")";
         }
 
-        function getCookie(c_name) {
-            var i, x, y, ARRcookies = document.cookie.split(";");
-
-            for (i = 0; i < ARRcookies.length; i++) {
-                x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
-                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
-                x = x.replace(/^\s+|\s+$/g, "");
-                if (x == c_name) {
-                    return unescape(y);
-                }
-            }
-        }
+        $(document).ready(function () {
+            $(document).on("click", ".submit-button", function () {
+                console.log("asdasdasd");
+                var form = $(this).closest("form");
+                //console.log(form);
+                form.submit();
+            });
+        });
     </script>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

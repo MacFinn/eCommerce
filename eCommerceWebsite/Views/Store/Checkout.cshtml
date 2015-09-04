@@ -1,0 +1,45 @@
+﻿@model eCommerceWebsite.Models.CategoryViewModel
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+    </div>
+    <br />
+    <h2>Checkout</h2>
+    <hr />
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+    </div>
+    @foreach(var product in Model.Products){
+        @Html.Partial("CheckoutProductPartial", product)
+    }
+    <br /><br />
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6" style="border: solid 1px #dddddd; border-radius: 5px 5px 5px; text-align: center; height: 200px; ">
+            <h3>Pay with credit/debit card</h3>
+            <hr />
+            <br />
+            <button type="button" class="btn btn-success" style="width: 80%; display: inline-block; margin: auto;">Click here to pay with Paypal</button>
+        </div>
+        <div class="col-md-6" style="border: solid 1px #dddddd; border-radius: 5px 5px 5px; text-align: center; height: 200px;">
+            <h3>Pay with Paypal</h3>
+            <hr />
+            <br />
+            <button type="button" class="btn btn-success" style="width: 80%; display: inline-block; margin: auto;">Click here to pay by card</button>
+        </div>
+    </div>
+</div>
+

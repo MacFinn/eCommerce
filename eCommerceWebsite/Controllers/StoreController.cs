@@ -109,10 +109,39 @@ namespace eCommerceWebsite.Controllers
 
             return View(category, model);
         }
+
+        public ActionResult ChangeQuantityInBasket(ProductResult model)
+        {
+            HttpCookie cookie = Request.Cookies["Basket"];
+
+            int productId = model.Id;
+            int quantity = model.Quantity;
+            int oldQuantity = Int16.Parse(cookie.Values[productId.ToString()]);
+            string item = cookie.Values[productId.ToString()];
+
+            if (item != null)
+            {
+                if (oldQuantity < quantity)
+                {
+                    var diff = quantity - oldQuantity;
+                    cookie.Values[productId.ToString()] = (int.Parse(item) + diff).ToString();
+                }
+                else  if (oldQuantity > quantity)
+                {
+                    var diff = oldQuantity - quantity;
+                    cookie.Values[productId.ToString()] = (int.Parse(item) - diff).ToString();
+                }
+            }
+            
+            Response.Cookies.Add(cookie);
+
+            return RedirectToAction("Checkout");
+        }
+
         public ActionResult AddToBasket(ProductResult model)
         {
             int productId = model.Id;
-            int quantity = 1;
+            int quantity = model.Quantity;
 
             if (Request.Cookies["Basket"] == null)
             {
@@ -127,14 +156,41 @@ namespace eCommerceWebsite.Controllers
                 string item = cookie.Values[productId.ToString()];
 
                 if (item != null)
-                    cookie.Values[productId.ToString()] = (int.Parse(item) + 1).ToString();
+                    cookie.Values[productId.ToString()] = (int.Parse(item) + quantity).ToString();
                 else
                     cookie.Values.Add(productId.ToString(), quantity.ToString());
 
                 Response.Cookies.Add(cookie);
-            }           
+            }
 
-            return Browse(model.Category.Trim());
+            return RedirectToAction("Browse", new { category = model.Category.ToString().Trim() });
+        }
+
+        public ActionResult Checkout()
+        {
+            HttpCookie cookie = Request.Cookies["Basket"];
+            List<string[]> pairs = new List<string[]>();
+
+            for(int i = 0; i < cookie.Values.Count; i++){
+                var key = cookie.Values.GetKey(i);
+                var val = cookie.Values.GetValues(i)[0];
+                var pair = new string[]  { key, val };
+                pairs.Add(pair);
+            }
+
+            CategoryViewModel model = new CategoryViewModel();
+            model.Products = new List<ProductResult>();
+            
+
+            foreach(var pair in pairs){
+                int id = Int32.Parse(pair[0]);
+                int quantity = Int32.Parse(pair[1]);
+                var x = getDetailsFromId(id);
+                x.Quantity = quantity;
+                model.Products.Add(x);
+            }
+
+            return View(model);
         }
 	}
 }

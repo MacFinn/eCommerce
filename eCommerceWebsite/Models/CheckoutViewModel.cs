@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Web;
 
 namespace eCommerceWebsite.Models
 {
-    public class ProductResult
+    public class CheckoutViewModel
     {
         public string Name { get; set; }
         public string Category { get; set; }
@@ -15,6 +15,5 @@ namespace eCommerceWebsite.Models
         public int Stock { get; set; }
         public int Id { get; set; }
         public int Quantity { get; set; }
-
     }
 }

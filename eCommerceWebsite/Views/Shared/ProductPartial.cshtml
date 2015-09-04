@@ -1,25 +1,54 @@
 ﻿@model eCommerceWebsite.Models.ProductResult
-<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="margin-top: 15px;">
-    <div class="col-md-12">
-        <a href="@Url.Action("Details", "Store", Model)">
-            <img src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" class="img-responsive" style="display:block; margin: 0 auto;" />
-        </a>
+           
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+    <div class="col-md-12" style="margin-top: 15px; padding: 10px; border: solid 1px #dddddd; border-radius: 5px 5px 5px; ">
+        <div class="col-md-12">
+            <a href="@Url.Action("Details", "Store", Model)">
+                <img src="@Model.ImageUrl" alt="@Model.Name" title="@Model.Name" class="img-responsive" style="display:block; margin: 0 auto;" />
+            </a>
+        </div>
+        <div class="col-md-12">
+            <h6>@Model.Name</h6>
+        </div>
+        <div class="col-md-12">
+            <h4>£@Model.Price</h4>
+        </div>
+        <div class="col-md-12">
+            <h6>Stock: @Model.Stock</h6>
+        </div>
+        <div class="col-md-12">
+            <div style="width: 50%; float: left;">
+                <a href="@Url.Action("Details", "Store", Model)">
+                    <input type="button" class="btn btn-default" value="Details" style="width: 100%;" />
+                </a>
+            </div>
+            
+            @using(Html.BeginForm("AddToBasket", "Store")){
+                @Html.Hidden("Id", Model.Id)
+                @Html.Hidden("Category", Model.Category)
+            <div style="width: 30%; float: left;">
+                @Html.TextBoxFor(m => m.Quantity, new { @type = "number", @min = "1", @step = "1", @class = "form-control quantityValue", @style = "width: 100%;", @value="1" })
+            </div>
+            <div style="width: 20%; float: left;">
+                <span class="btn btn-success submit-button" style="width: 100%;"><span class="glyphicon glyphicon-shopping-cart"></span></span>
+            </div>
+            }
+            
+        </div>
     </div>
-    <div class="col-md-12">
-        <h6>@Model.Name</h6>
-    </div>
-    <div class="col-md-12">
-        <h4>£@Model.Price</h4>
-    </div>
-    <div class="col-md-12">
-        <h6>Stock: @Model.Stock</h6>
-    </div>
-    <div class="col-md-12">
-        <a href="@Url.Action("Details", "Store", Model)">
-            <input type="button" class="btn btn-default btn-sm" value="View details" style="width: 100%;" />
-        </a>
-        <a href="@Url.Action("AddToBasket", "Store", Model)">
-            <input type="button" class="btn btn-success btn-sm" value="Add to basket" style="width: 100%; margin-top: 10px;" />
-        </a>
+    
 </div>
-</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(document).on("click", ".submit-button", function () {
+                console.log(  "asdasdasd"  );
+                var form = $(this).closest("form");
+                //console.log(form);
+                form.submit();
+            });
+        });
+    </script>
+}

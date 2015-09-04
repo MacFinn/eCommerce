@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
@@ -169,6 +170,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CategoryViewModel.cs" />
+    <Compile Include="Models\CheckoutViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ProductResult.cs" />
     <Compile Include="App_Data\Products.designer.cs">
@@ -228,12 +230,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\ProductPartial.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
@@ -244,8 +240,9 @@
     <Content Include="Views\Store\SmokingParaphenalia.cshtml" />
     <Content Include="Views\Store\Sale.cshtml" />
     <Content Include="Views\Store\Details.cshtml" />
-    <Content Include="Views\Shared\Partial1.cshtml" />
     <Content Include="Views\Shared\PaginationPartial.cshtml" />
+    <Content Include="Views\Store\Checkout.cshtml" />
+    <Content Include="Views\Shared\CheckoutProductPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -262,6 +259,9 @@
     <None Include="App_Data\Products.dbml.layout">
       <DependentUpon>Products.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
