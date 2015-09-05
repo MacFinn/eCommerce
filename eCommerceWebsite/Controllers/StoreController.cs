@@ -17,7 +17,7 @@ namespace eCommerceWebsite.Controllers
 
             if (model.Products.Count > 8)
             {
-                double count = model.Products.Count / 8;
+                double count = model.Products.Count / 8.0;
                 model.TotalPages = (int)Math.Ceiling(count);
                 model.CurrentPage = 1;
              }
@@ -27,9 +27,17 @@ namespace eCommerceWebsite.Controllers
                 model.CurrentPage = 1;
             }
 
+            int resultCount;
+            if (model.Products.Count % 8 != 0 && 1 == model.TotalPages)
+            {
+                resultCount = model.Products.Count % 8;
+            }
+            else
+            {
+                resultCount = 8;
+            }
 
-
-            model.Products = model.Products.GetRange(0, 8);
+            model.Products = model.Products.GetRange(0, resultCount);
 
             
             model.CurrentCategory = category;
@@ -92,12 +100,21 @@ namespace eCommerceWebsite.Controllers
             return result;
         }
 
-        public ActionResult GoToPage(int page, string category)
+        public ActionResult GoToPage(int page, string category, int totalPages)
         {
             string CurrentCategory = category;
             List<ProductResult> allResults = getResultsByCategory(category);
             int firstResultIndex = (page - 1) * 8;
-            int resultCount = 8;
+            int resultCount;
+            if (allResults.Count % 8 != 0 && page == totalPages)
+            {
+                resultCount = allResults.Count % 8;
+            }
+            else
+            {
+                resultCount = 8;
+            }
+
             var selectedResults = allResults.GetRange(firstResultIndex, resultCount);
 
             CategoryViewModel model = new CategoryViewModel();
@@ -171,26 +188,40 @@ namespace eCommerceWebsite.Controllers
             HttpCookie cookie = Request.Cookies["Basket"];
             List<string[]> pairs = new List<string[]>();
 
-            for(int i = 0; i < cookie.Values.Count; i++){
-                var key = cookie.Values.GetKey(i);
-                var val = cookie.Values.GetValues(i)[0];
-                var pair = new string[]  { key, val };
-                pairs.Add(pair);
+            if(cookie != null){
+                for (int i = 0; i < cookie.Values.Count; i++)
+                {
+                    var key = cookie.Values.GetKey(i);
+                    var val = cookie.Values.GetValues(i)[0];
+                    var pair = new string[] { key, val };
+                    pairs.Add(pair);
+                }
+
+                CategoryViewModel model = new CategoryViewModel();
+                model.Products = new List<ProductResult>();
+
+
+                foreach (var pair in pairs)
+                {
+                    int id = Int32.Parse(pair[0]);
+                    int quantity = Int32.Parse(pair[1]);
+                    var x = getDetailsFromId(id);
+                    x.Quantity = quantity;
+                    model.Products.Add(x);
+                }
+
+                return View(model);
+            } else
+            {
+                return RedirectToAction("Index", "Home");
             }
 
-            CategoryViewModel model = new CategoryViewModel();
-            model.Products = new List<ProductResult>();
             
+        }
 
-            foreach(var pair in pairs){
-                int id = Int32.Parse(pair[0]);
-                int quantity = Int32.Parse(pair[1]);
-                var x = getDetailsFromId(id);
-                x.Quantity = quantity;
-                model.Products.Add(x);
-            }
-
-            return View(model);
+        public ActionResult Success()
+        {
+            return View();
         }
 	}
 }

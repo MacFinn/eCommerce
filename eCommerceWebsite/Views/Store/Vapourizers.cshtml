@@ -9,6 +9,11 @@
     <hr />
 </div>
 <div class="row">
+    <div style="float: right;">
+        @Html.Partial("PaginationPartial", Model)
+    </div>
+</div>
+<div class="row">
     @foreach (eCommerceWebsite.Models.ProductResult product in Model.Products)
     {
         @Html.Partial("ProductPartial", product)

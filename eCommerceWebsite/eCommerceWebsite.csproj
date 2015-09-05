@@ -243,6 +243,7 @@
     <Content Include="Views\Shared\PaginationPartial.cshtml" />
     <Content Include="Views\Store\Checkout.cshtml" />
     <Content Include="Views\Shared\CheckoutProductPartial.cshtml" />
+    <Content Include="Views\Store\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

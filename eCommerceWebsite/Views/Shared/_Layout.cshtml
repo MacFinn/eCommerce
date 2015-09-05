@@ -22,11 +22,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Bongs", "Browse", "Store", new { category = "Bongs" }, null)</li>
-                    <li>@Html.ActionLink("Vapourizers", "Browse", "Store", new { category = "Vapourizers" }, null)</li>
+                    @*<li>@Html.ActionLink("Vapourizers", "Browse", "Store", new { category = "Vapourizers" }, null)</li>*@
                     <li>@Html.ActionLink("Papers", "Browse", "Store", new { category = "Papers" }, null)</li>
                     <li>@Html.ActionLink("Accessories", "Browse", "Store", new { category = "SmokingAccessories" }, null)</li>
                     <li>@Html.ActionLink("Paraphenalia", "Browse", "Store", new { category = "SmokingParaphenalia" }, null)</li>
-                    <li>@Html.ActionLink("Sale", "Browse", "Store", new { category = "Sale" }, null)</li>
+                    @*<li>@Html.ActionLink("Sale", "Browse", "Store", new { category = "Sale" }, null)</li>*@
                     <li>@Html.ActionLink("Basket", "Checkout", "Store", null, new { @id = "BasketText" })</li>
                 </ul>
             </div>
@@ -34,12 +34,18 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-
-
+        <br />
+        <hr />
         <footer>
-            <br />
+            <br /><br />
+            <p>Contact us: 
+            <br />E: mail@NugFace.com 
+            <br />P: +44 792 1436 865 
+            <br /><br />Work hours: 9am - 10pm GMT
+            <hr />&copy; @DateTime.Now.Year - NugFace Smoking Supplies
+            </p>
             <hr />
-            <p>&copy; @DateTime.Now.Year - NugFace Cannabis Supplies</p>
+            
         </footer>
     </div>
 
@@ -68,14 +74,17 @@
 
             }
 
-            document.getElementById("BasketText").innerHTML = "Basket (" + numberOfItems + ")";
+            if (isNaN(numberOfItems)) {
+                numberOfItems = 0;
+            }
+            
+                document.getElementById("BasketText").innerHTML = "Basket (" + numberOfItems + ")";
+            
         }
 
         $(document).ready(function () {
             $(document).on("click", ".submit-button", function () {
-                console.log("asdasdasd");
                 var form = $(this).closest("form");
-                //console.log(form);
                 form.submit();
             });
         });

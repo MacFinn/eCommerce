@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
-   
+
 }
 <div class="col-md-12">
     <div class="col-md-12">
@@ -13,7 +13,7 @@
 
                         <div class="col-md-12" style="margin-top: 40px;">
                             <div class="row">
-                                @Html.ActionLink("Home", "Index", "Home",null,  new { @style = "color: #666666; text-decoration: underline;" }) > @Model.Category > @Model.Name
+                                @Html.ActionLink("Home", "Index", "Home", null, new { @style = "color: #666666; text-decoration: underline;" }) > @Model.Category > @Model.Name
                             </div>
                             <div class="row" style="margin-top: 40px;">
                                 <div class="col-md-7">
@@ -26,7 +26,18 @@
                                     <hr />
                                     <p>@Model.Description</p>
                                     <hr />
-                                    <input type="submit" name="add" value="Add to Cart" class="btn btn-success" style="width:100%;">
+                                    <p>Quantity:</p>
+                                    @using (Html.BeginForm("AddToBasket", "Store"))
+                                    {
+                                        @Html.Hidden("Id", Model.Id)
+                                        @Html.Hidden("Category", Model.Category)
+                                        <div style="width: 40%; float: left;">
+                                            @Html.TextBoxFor(m => m.Quantity, new { @type = "number", @min = "1", @step = "1", @class = "form-control quantityValue", @style = "width: 100%;", @value = "1" })
+                                        </div>
+                                        <div style="width: 60%; float: left;">
+                                            <span class="btn btn-success submit-button" style="width: 100%;"><span style="word-spacing: 3px;"class="glyphicon glyphicon-shopping-cart"></span><span>&nbsp;Add to basket</span></span>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -40,3 +51,16 @@
 </div>
 
 
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(document).on("click", ".submit-button", function () {
+                console.log("asdasdasd");
+                var form = $(this).closest("form");
+                //console.log(form);
+                form.submit();
+            });
+        });
+    </script>
+}

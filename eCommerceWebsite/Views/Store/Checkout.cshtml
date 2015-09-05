@@ -21,24 +21,53 @@
     }
     <br /><br />
 </div>
-<div class="row">
-    <div class="col-md-12">
-
-    </div>
-</div>
-<div class="row">
+<div class="row" style="margin-top: 15px;">
     <div class="col-md-12">
         <div class="col-md-6" style="border: solid 1px #dddddd; border-radius: 5px 5px 5px; text-align: center; height: 200px; ">
             <h3>Pay with credit/debit card</h3>
             <hr />
             <br />
-            <button type="button" class="btn btn-success" style="width: 80%; display: inline-block; margin: auto;">Click here to pay with Paypal</button>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="finzy.gfx@gmail.com">
+                @*item names and prices*@
+                @foreach (var product in Model.Products)
+                {
+                    <input type="hidden" name="@string.Concat("item_name_", Model.Products.FindIndex(x => x==product) + 1)" value="@product.Name">
+                    <input type="hidden" name="@string.Concat("amount_", Model.Products.FindIndex(x => x==product) + 1)" value="@product.Price">
+                    <input type="hidden" name="@string.Concat("quantity_", Model.Products.FindIndex(x => x==product) + 1)" value="@product.Quantity">
+                }
+                <input type="hidden" name="upload" value="1">
+                <input type="hidden" name="no_shipping" value="0">
+                <input type="hidden" name="return" value="http://nugface.com/store/success">
+                <input type="hidden" name="cancel_return" value="http://nugface.com/store/failed">
+                <input type="hidden" name="cn" value="Do you have any special requests?">
+                <input type="hidden" name="currency_code" value="GBP">
+                <input type="submit" value="Click here to pay by card" class="btn btn-success" style="width: 80%; display: inline-block; margin: auto;" name="submit">
+            </form>
         </div>
         <div class="col-md-6" style="border: solid 1px #dddddd; border-radius: 5px 5px 5px; text-align: center; height: 200px;">
             <h3>Pay with Paypal</h3>
             <hr />
             <br />
-            <button type="button" class="btn btn-success" style="width: 80%; display: inline-block; margin: auto;">Click here to pay by card</button>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="business" value="finzy.gfx@gmail.com">
+                @*item names and prices*@
+                @foreach(var product in Model.Products){
+                <input type="hidden" name="@string.Concat("item_name_", Model.Products.FindIndex(x => x==product) + 1)" value="@product.Name">
+                <input type="hidden" name="@string.Concat("amount_", Model.Products.FindIndex(x => x==product) + 1)" value="@product.Price">
+                <input type="hidden" name="@string.Concat("quantity_", Model.Products.FindIndex(x => x==product) + 1)" value="@product.Quantity">
+                }
+                <input type="hidden" name="upload" value="1">
+                <input type="hidden" name="no_shipping" value="0">
+                <input type="hidden" name="return" value="http://nugface.com/store/success">
+                <input type="hidden" name="cancel_return" value="http://nugface.com/store/failed">
+                <input type="hidden" name="cn" value="Do you have any special requests?">
+                <input type="hidden" name="currency_code" value="GBP">
+                <input type="submit" value="Click here to pay with paypal" class="btn btn-success" style="width: 80%; display: inline-block; margin: auto;" name="submit">
+            </form>
         </div>
     </div>
 </div>
